@@ -1,0 +1,23 @@
+{
+  "name": "dogechatserver",
+  "version": "1.0.0",
+  "description": "server for doge chat",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdabrowski1989/DogeChatServer.git"
+  },
+  "author": "Dabrowski Pawel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pdabrowski1989/DogeChatServer/issues"
+  },
+  "homepage": "https://github.com/pdabrowski1989/DogeChatServer#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "socket.io": "^2.0.3"
+  }
+}
