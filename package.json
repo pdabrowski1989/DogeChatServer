@@ -18,9 +18,8 @@
   "homepage": "https://github.com/pdabrowski1989/DogeChatServer#readme",
   "dependencies": {
     "express": "^4.15.4",
-    "socket.io": "^2.0.3"
-  },
-  "devDependencies": {
-    "mongodb": "^2.2.31"
+    "socket.io": "^2.0.3",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.11.11"
   }
 }
