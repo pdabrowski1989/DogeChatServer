@@ -1,26 +1,25 @@
+const port = 8080;
 const app = require('express')();
 const http = require('http').Server(app);
-const MongoClient = require('mongodb').MongoClient;
+const mongodb = require('mongodb').MongoClient;
 const io = require('socket.io')(http);
 
 app.get('/', (req, res) => {
     res.send('<h1>Hello world</h1>');
 });
 
-MongoClient.connect('mongodb://doge_db_admin_1:databasePasswordQ!@#@ds135574.mlab.com:35574/doge_db_1', (err, db) => {
+mongodb.connect('mongodb://doge_db_admin_1:oddajhajsy@ds135574.mlab.com:35574/doge_db_1', (err, db) => {
     if (err) throw err;
 
-    db.collection('mammals').find().toArray((err, result) => {
+    db.collection('users').find().toArray((err, result) => {
         if (err) throw err;
-
-        console.log(result);
     })
 });
 
-io.on('connection', (socket) => {
+io.on('connection', () => {
     console.log('a user connected');
 });
 
-http.listen(8080, () => {
-    console.log('listening on *:8080');
+http.listen(port, () => {
+    console.log('listening on ' + port);
 });
