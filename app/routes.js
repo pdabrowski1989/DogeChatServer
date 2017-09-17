@@ -1,3 +1,8 @@
-/**
- * Created by PawelD on 2017-09-17.
- */
+module.exports = (app, passport) => {
+
+    app.get('/', (req, res) => {
+        res.send('<h1>Woof, woof!</h1>');
+    });
+
+
+};
